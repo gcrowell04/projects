@@ -1,0 +1,12 @@
+
+Explanation of application
+
+First, first_check() will check for an alread existing connection
+    1. If true, monitoring will start.
+    2. If false, infinite loop will be exceuted and wait for ping() to be true. 
+        I. If ping() is false the loop will be exceuted until true.
+        II. If ping() is true the loop breaks and monitoring starts.
+Second, To monitor current connection an infinite loop will be executed.
+    1. If ping() is true, loop will be ran eevery 5 seconds until connection dies.
+    2. If ping false, downtime is printed and the loop will be executed every few seconds until new connection is restored.
+    3. After connection is restored, uptime and availability are printed and the program restarts from the loop.
